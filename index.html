@@ -1,120 +1,166 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>dc43 — Ship reliable data products, everywhere</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {background:#f8fafc; color:#0f172a; -webkit-font-smoothing:antialiased;}
-    .hero {padding:48px 0;}
-    .card-demo img{max-height:320px; object-fit:cover;}
-    pre {background:#0b1220;color:#e6eef8;padding:12px;border-radius:6px;}
+    body { background:#f7fafc; color:#0f172a; -webkit-font-smoothing:antialiased; }
+    .hero { padding:48px 0; }
+    .demo-card { min-height:240px; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:8px; box-shadow:0 6px 18px rgba(2,6,23,0.06); }
+    .panel { background:#fff; border-radius:10px; padding:24px; box-shadow:0 6px 18px rgba(2,6,23,0.04); }
+    .persona { border-left:4px solid #0ea5a3; padding-left:12px; margin-bottom:12px; }
+    pre { background:#0b1220; color:#e6eef8; padding:12px; border-radius:6px; overflow:auto; }
+    .muted { color:#64748b; }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container py-4">
     <!-- Header -->
     <nav class="d-flex justify-content-between align-items-center py-3">
       <h1 class="h4 mb-0">dc43</h1>
       <div>
         <a href="https://github.com/NextLab-SRL/dc43" target="_blank" class="me-3">GitHub</a>
+        <a href="#philosophy" class="me-2">Philosophy</a>
+        <a href="#value" class="me-2">Value</a>
         <a href="#demo">Demo</a>
       </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero row align-items-center">
+    <!-- HERO -->
+    <section class="hero row align-items-center mb-4">
       <div class="col-md-6">
         <h2 class="display-6 fw-bold">Ship reliable data products, everywhere.</h2>
-        <p class="lead text-muted">dc43 brings machine-readable data contracts and governance workflows to pipelines, runtimes and catalogs so teams catch regressions earlier, enforce SLAs automatically and keep stewardship visible.</p>
+        <p class="lead muted">
+          dc43 gives teams machine-readable data contracts and a governance-first workflow so pipelines, catalogs and stewards share a single source of truth — reducing incidents, speeding delivery and restoring trust in data.
+        </p>
 
         <ul class="mt-3">
-          <li><strong>Vendor-agnostic lifecycle</strong> — author, review and version contracts.</li>
-          <li><strong>Runtime enforcement</strong> — CI → runtime checks with one-line helpers.</li>
-          <li><strong>Steward integration</strong> — Connect Collibra, Unity Catalog or custom UIs.</li>
+          <li><strong>Governance-first & vendor agnostic</strong> — contract lifecycle + drafting + approvals.</li>
+          <li><strong>Runtime enforcement</strong> — CI → runtime checks with lightweight adapters for pipelines.</li>
+          <li><strong>Catalog & steward integration</strong> — first-class hooks for Collibra, Unity Catalog and other stores.</li>
         </ul>
 
         <div class="mt-4">
           <a href="https://github.com/NextLab-SRL/dc43" class="btn btn-primary me-2" target="_blank">Open repo</a>
-          <a href="#demo" class="btn btn-outline-primary">Watch demo</a>
+          <a href="#demo" class="btn btn-outline-primary">Demo (coming)</a>
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="card card-demo shadow-sm">
-          <img src="demo-highlight.gif" alt="demo highlight" class="w-100">
-        </div>
-      </div>
-    </section>
-
-    <!-- Problem / How it works -->
-    <section class="bg-white p-4 rounded shadow-sm mb-4">
-      <div class="row">
-        <div class="col-md-6">
-          <h5>Problem</h5>
-          <p class="text-muted">Expectations (schema, quality, SLAs) are scattered across notebooks, CI, catalogs and steward UIs. Breaks surface late and ownership is unclear.</p>
-        </div>
-        <div class="col-md-6">
-          <h5>Solution</h5>
-          <p class="text-muted">dc43 separates contract concepts (lifecycle, drafting, approvals) from implementations (stores, adapters, runtime helpers) and enforces contracts in pipelines while feeding observations back to governance.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Demo -->
-    <section id="demo" class="mb-4">
-      <h4>Compound demo (Databricks + Collibra)</h4>
-      <p class="text-muted">Create contract → run pipeline (write_with_governance) → metrics posted to Collibra → steward validates → runtime resumes.</p>
-
-      <div class="row g-3">
-        <div class="col-md-7">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_PLACEHOLDER" title="dc43 demo" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="p-3 bg-white rounded shadow-sm">
-            <h6>Assets used</h6>
-            <ul>
-              <li><strong>dc43-demo app</strong> — contract + DQ UI</li>
-              <li><strong>Local DLT harness</strong> — reproducible pipeline demo</li>
-              <li><strong>Collibra adapter</strong> — HTTP adapter + stub</li>
-            </ul>
-            <a href="https://github.com/NextLab-SRL/dc43/tree/main/packages/dc43-integrations/examples" target="_blank" class="small">Open example scripts →</a>
+        <div class="demo-card p-4">
+          <div class="text-center">
+            <div style="font-weight:600; font-size:1.05rem;">Demo coming soon</div>
+            <div class="muted small mt-2">Databricks example will be added here as the first live demo</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quickstart -->
+    <!-- Philosophy -->
+    <section id="philosophy" class="mb-4">
+      <div class="panel">
+        <h3>Philosophy — contracts, data products and governance</h3>
+        <p class="muted">
+          At its core dc43 separates <strong>concepts</strong> from <strong>implementations</strong>. A data contract is a machine-readable description of expectations (schema, quality rules, SLAs), while a data product is the runnable endpoint or dataset bound to a contract.  
+          This separation means governance decisions live close to the contract owner and the runtime can remain lightweight: pipelines validate against the contract and report observations back to governance for steward review.
+        </p>
+
+        <p class="muted mb-0"><strong>Key principles:</strong></p>
+        <ul class="mt-2">
+          <li><strong>Governance-first:</strong> drafting, review and approval come before runtime enforcement so stewardship is explicit.</li>
+          <li><strong>Pluggable:</strong> the same contract concepts work with filesystem, Delta, catalog APIs and governance platforms.</li>
+          <li><strong>Feedback loop:</strong> runtime metrics feed governance, stewards update contracts, and pipelines react — a closed loop for safe evolution.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="mb-4">
+      <div class="panel">
+        <h3>How contracts are used & enforced (simple)</h3>
+        <ol class="mt-3">
+          <li><strong>Author & approve</strong> — author an ODCS contract and publish/version it in the contract store; stewards review and validate.</li>
+          <li><strong>Bind to a data product</strong> — a data product or dataset port is bound to a contract version so consumers and runtimes can discover expectations.</li>
+          <li><strong>Runtime checks</strong> — pipelines call a simple adapter (Spark, DLT, HTTP) to collect schema/metric observations and submit them to the governance layer.</li>
+          <li><strong>Verdict & enforcement</strong> — governance evaluates metrics and returns a verdict (`ok | warn | block`). The runtime enforces the verdict (block write, emit warning, or allow) according to policy.</li>
+          <li><strong>Steward loop</strong> — stewards inspect metrics, update the contract or approve versions. The new contract drives future pipeline behavior.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Value for company -->
+    <section id="value" class="mb-4">
+      <div class="panel">
+        <h3>Business value — why companies adopt dc43</h3>
+        <ul class="mt-3">
+          <li><strong>Fewer production incidents:</strong> catch schema and quality regressions early in CI or at write time so downstream jobs fail less often.</li>
+          <li><strong>Clear ownership:</strong> contracts make owners and steward responsibilities explicit — audit trails and lifecycle states reduce ambiguity.</li>
+          <li><strong>Faster onboarding & delivery:</strong> one-line helpers and contract-derived expectations reduce engineering boilerplate and speed handoffs.</li>
+          <li><strong>Trust & usability:</strong> consumers regain confidence in datasets (SLA tracking, compatibility matrix), increasing adoption and reducing rework.</li>
+          <li><strong>Vendor flexibility:</strong> governance is portable — swap storage or catalog implementations without rewriting runtime logic.</li>
+        </ul>
+        <p class="muted mb-0"><em>Tip:</em> for marketing, replace these bullets with measured outcomes from pilots (e.g., % fewer incidents, mean time to detection improvement).</p>
+      </div>
+    </section>
+
+    <!-- Persona benefits -->
+    <section class="mb-4">
+      <div class="panel">
+        <h3>Value by persona</h3>
+
+        <div class="persona">
+          <h5>Data Product Owner</h5>
+          <p class="muted">Clear contract ownership and versioning, visibility of dataset compatibility, and a single place to publish expectations that drive downstream enforcement. Less firefighting and clearer SLAs.</p>
+        </div>
+
+        <div class="persona">
+          <h5>Data Governance / Steward</h5>
+          <p class="muted">A workflow-friendly system for draft → review → approve. Compatibility assets and audit history let stewards make evidence-driven decisions and document rationale.</p>
+        </div>
+
+        <div class="persona">
+          <h5>Data Engineer</h5>
+          <p class="muted">One-line runtime helpers in pipelines (Spark/DLT/HTTP) enforce contracts automatically, produce meaningful validation reports, and reduce debugging time after deployments or schema changes.</p>
+        </div>
+
+        <div class="persona">
+          <h5>Data Consumer / Analyst</h5>
+          <p class="muted">Higher trust in datasets thanks to explicit contracts and steward approvals. Consumers can rely on documented SLAs and compatibility, reducing rework and incorrect analyses.</p>
+        </div>
+
+        <div class="persona">
+          <h5>Platform / Infrastructure</h5>
+          <p class="muted">A pluggable model that fits existing catalogs and governance platforms. The platform team can standardize enforcement policies and scale contract checks across teams.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quickstart and CTA -->
     <section class="mb-5">
-      <h5>Quickstart snippets</h5>
-
-      <div class="row g-3">
-        <div class="col-md-6">
-          <div class="p-3 bg-white rounded shadow-sm">
-            <strong>Contract (ODCS)</strong>
-            <pre><code>contract = OpenDataContractStandard(
-  version="0.1.0", apiVersion="3.0.2",
-  id="sales.orders", name="Orders",
-  schema_=[ ... ]
-)</code></pre>
-          </div>
+      <div class="panel d-md-flex align-items-start justify-content-between">
+        <div style="flex:1; min-width:300px;">
+          <h4 class="mb-2">Quick technical snapshot</h4>
+          <p class="muted mb-2">Contracts follow ODCS, are stored/versioned in a contract store and enforced by lightweight adapters. Runtime helpers call the governance service and act on the returned verdict.</p>
+          <pre><code>write_with_governance(df, request=..., governance_service=governance, enforce=True)</code></pre>
         </div>
 
-        <div class="col-md-6">
-          <div class="p-3 bg-white rounded shadow-sm">
-            <strong>Runtime write (one-line)</strong>
-            <pre><code>write_with_governance(df, request=..., governance_service=governance, enforce=True)</code></pre>
-          </div>
+        <div style="width:320px; margin-left:24px;">
+          <h5>Next steps</h5>
+          <ul class="muted">
+            <li>First demo: Databricks notebook with local governance (coming)</li>
+            <li>Next: Collibra test tenant to show steward integration</li>
+            <li>Contact: <a href="mailto:admin@nextlab.be">admin@nextlab.be</a></li>
+          </ul>
+          <a href="https://github.com/NextLab-SRL/dc43" class="btn btn-outline-primary mt-2" target="_blank">See the repo</a>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-muted pb-5">
-      <p>dc43 — Data Contracts For Free! · <a href="mailto:admin@nextlab.be">admin@nextlab.be</a></p>
+    <footer class="text-center muted py-4">
+      <p class="muted mb-0">dc43 — Data Contracts For Free! · <a href="mailto:admin@nextlab.be">admin@nextlab.be</a></p>
     </footer>
   </div>
 </body>
