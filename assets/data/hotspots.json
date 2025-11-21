@@ -1,0 +1,38 @@
+{
+  "images": [
+    {
+      "id": "integration-helper",
+      "file": "/assets/screenshots/integration-helper.png",
+      "alt": "Integration helper wizard with configuration, copy helper, and generated code panel",
+      "hotspots": [
+        {
+          "label": 1,
+          "x": 18,
+          "y": 12,
+          "title": "Bootstrap wizard",
+          "body": "A guided wizard that bootstraps the integration and generates an initial config.",
+          "code": "dc43 init --integration databricks --workspace myws",
+          "docs": "https://github.com/NextLab-SRL/dc43/docs/integration-helper"
+        },
+        {
+          "label": 2,
+          "x": 35,
+          "y": 48,
+          "title": "Copy helper",
+          "body": "Click 'Copy' to paste the adapter snippet into your Databricks notebook.",
+          "code": "from dc43 import write_with_governance\nwrite_with_governance(df, ...)",
+          "docs": "https://github.com/NextLab-SRL/dc43/tree/main/examples/databricks"
+        },
+        {
+          "label": 3,
+          "x": 66,
+          "y": 80,
+          "title": "Config editor",
+          "body": "Edit thresholds and SLAs here; saving creates a new contract version.",
+          "code": "contract.thresholds = {...}\ncontract.publish()",
+          "docs": "https://github.com/NextLab-SRL/dc43/docs/contracts"
+        }
+      ]
+    }
+  ]
+}

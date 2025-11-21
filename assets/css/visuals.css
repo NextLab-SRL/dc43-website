@@ -1,0 +1,10 @@
+/* visuals.css */
+.visuals-panel { background:#fff; border-radius:10px; padding:18px; box-shadow:0 6px 18px rgba(2,6,23,0.04); margin-bottom: 1rem; }
+.hotspot { position:absolute; width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:600; background:#fff; border:2px solid #0ea5a3; color:#0ea5a3; cursor:pointer; box-shadow:0 6px 14px rgba(2,6,23,0.06); }
+.hotspot.pulse { animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow:0 0 0 0 rgba(14,165,163,0.35);} 70% { box-shadow:0 0 0 12px rgba(14,165,163,0);} 100% { box-shadow:0 0 0 0 rgba(14,165,163,0);} }
+
+.screenshot-wrap { position:relative; max-width:100%; }
+.screenshot-img { width:100%; height:auto; display:block; border-radius:8px; }
+.persona-story { min-height:120px; }
+.code-block { background:#0b1220; color:#e6eef8; padding:12px; border-radius:6px; overflow:auto; }

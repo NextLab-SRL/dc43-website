@@ -1,0 +1,43 @@
+{
+  "personas": [
+    {
+      "id": "data-engineer",
+      "title": "Data Engineer",
+      "hero": {"src": "/assets/screenshots/databricks-write.png", "alt": "Data engineer writing a Delta table with dc43 enforcement"},
+      "images": [
+        {"src": "/assets/screenshots/databricks-adapter.png", "alt": "Databricks adapter snippet inside a notebook"},
+        {"src": "/assets/screenshots/runtime-verdicts.png", "alt": "Runtime verdicts returned from dc43"}
+      ],
+      "story": "Bind a data product to a contract, add the Databricks adapter and call `write_with_governance(...)` in your DLT pipeline. Incompatible writes are blocked in staging, which reduces incidents.",
+      "ctas": [
+        {"label": "Databricks Quickstart", "href": "https://github.com/NextLab-SRL/dc43/tree/main/examples/databricks"}
+      ]
+    },
+    {
+      "id": "data-steward",
+      "title": "Data Steward",
+      "hero": {"src": "/assets/screenshots/steward-metrics-history.png", "alt": "Steward reviewing metrics history for a contract"},
+      "images": [
+        {"src": "/assets/screenshots/contract-review.png", "alt": "Contract version under steward review"},
+        {"src": "/assets/screenshots/metrics-history.png", "alt": "Metrics history chart for a governed dataset"}
+      ],
+      "story": "Stewards review runtime metrics at the dataset level and publish new contract versions with evidence-backed decisions.",
+      "ctas": [
+        {"label": "Steward workflow", "href": "https://github.com/NextLab-SRL/dc43/docs/steward-workflow"}
+      ]
+    },
+    {
+      "id": "product-owner",
+      "title": "Product Owner",
+      "hero": {"src": "/assets/screenshots/product-catalog.png", "alt": "Product catalog entry showing contract metadata"},
+      "images": [
+        {"src": "/assets/screenshots/compatibility-matrix.png", "alt": "Compatibility matrix for contract versions"},
+        {"src": "/assets/screenshots/product-health.png", "alt": "Product health indicators and SLAs"}
+      ],
+      "story": "Publish contract metadata into your catalog so consumers can see SLAs, owners and compatibility. This increases adoption and reduces confusion.",
+      "ctas": [
+        {"label": "See contract examples", "href": "https://github.com/NextLab-SRL/dc43/examples"}
+      ]
+    }
+  ]
+}
