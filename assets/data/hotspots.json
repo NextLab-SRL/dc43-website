@@ -2,7 +2,7 @@
   "images": [
     {
       "id": "integration-helper",
-      "file": "/assets/screenshots/integration-helper.png",
+      "file": "assets/screenshots/integration-helper.png",
       "alt": "Integration helper wizard with configuration, copy helper, and generated code panel",
       "hotspots": [
         {
