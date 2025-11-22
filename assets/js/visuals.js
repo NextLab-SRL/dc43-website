@@ -157,8 +157,8 @@ function renderPersonaTabs(personas) {
 
 async function initVisuals() {
   try {
-    const hotspotsData = await loadJSON('/assets/data/hotspots.json');
-    const personasData = await loadJSON('/assets/data/personas.json');
+    const hotspotsData = await loadJSON('/dc43-website/assets/data/hotspots.json');
+    const personasData = await loadJSON('/dc43-website/assets/data/personas.json');
     // Insert visuals section
     const container = document.getElementById('visuals-root');
     if (!container) return;
