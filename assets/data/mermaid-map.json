@@ -1,0 +1,502 @@
+{
+    "nodes": {
+        "w0_story": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/product-catalog.png",
+                    "alt": "Product catalog: PO drafts product and ports"
+                },
+                {
+                    "file": "assets/screenshots/data-product-editor.png",
+                    "alt": "Data product editor showing ports and bindings"
+                }
+            ],
+            "story_text": "PO drafts a contract and product/port idea; steward finalizes the contract with types, rules, thresholds and acceptance tests."
+        },
+        "w0_s1": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/product-catalog.png",
+                    "alt": "PO drafts product and contract concept"
+                }
+            ],
+            "story_text": "PO drafts the product and contract concept (version created, status: draft)."
+        },
+        "w0_s2": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/data-product-editor.png",
+                    "alt": "Data product editor: output ports and expectations"
+                }
+            ],
+            "story_text": "PO defines output ports and initial expectations; notes which upstream ports feed this product."
+        },
+        "w0_s3": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/contract-editor.png",
+                    "alt": "Contract editor: rules, thresholds and acceptance tests"
+                }
+            ],
+            "story_text": "PO initiates contract draft; Steward completes low-level details (types, rules, thresholds, acceptance tests)."
+        },
+        "w0_s4": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/data-product-editor.png",
+                    "alt": "Product editor showing contract linked to ports"
+                },
+                {
+                    "file": "assets/screenshots/product-catalog.png",
+                    "alt": "Product catalog entry"
+                }
+            ],
+            "story_text": "Steward links finalized contract to output ports; product version increments; platform policy expectations recorded."
+        },
+        "w0_po": {
+            "screenshots": [],
+            "story_text": "PO — Ana (initiates product & contract)."
+        },
+        "w0_ds": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/data-product-editor.png",
+                    "alt": "Steward working in product editor"
+                }
+            ],
+            "story_text": "DS — Steward (finalizes contract & links ports)."
+        },
+        "w1_story": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/integration-helper-read-code.png",
+                    "alt": "Integration helper read snippet"
+                },
+                {
+                    "file": "assets/screenshots/integration-helper-write-code.png",
+                    "alt": "Integration helper write snippet"
+                },
+                {
+                    "file": "assets/screenshots/databricks-write.png",
+                    "alt": "Databricks notebook showing write"
+                }
+            ],
+            "story_text": "DE consumes steward-defined contract: binds reads, implements transforms, uses write_with_governance; platform ensures DC43 linkage."
+        },
+        "w1_s1": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/integration-helper-read-code.png",
+                    "alt": "Read example: read_with_governance"
+                }
+            ],
+            "story_text": "DE configures project to use the governance service and binds reads to the declared input ports."
+        },
+        "w1_s2": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/integration-helper-write-code.png",
+                    "alt": "Write example: write_with_governance"
+                },
+                {
+                    "file": "assets/screenshots/databricks-write.png",
+                    "alt": "Notebook write cell"
+                }
+            ],
+            "story_text": "DE implements transformation rules and uses write_with_governance; runtime reports status to governance."
+        },
+        "w1_s3": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/integration-helper-read-code.png",
+                    "alt": "Read example and documentation"
+                }
+            ],
+            "story_text": "DE publishes read/write examples and documents transformation and compatibility semantics."
+        },
+        "w1_s4": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/runtime-verdicts.png",
+                    "alt": "Runtime verdicts and CI validation"
+                }
+            ],
+            "story_text": "DE configures CI to validate contract presence and publishes governance metadata to the catalog."
+        },
+        "w1_de": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/databricks-write.png",
+                    "alt": "DE work in notebooks"
+                }
+            ],
+            "story_text": "DE — Luca (implements adapters & CI)."
+        },
+        "w1_pl": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/runtime-verdicts.png",
+                    "alt": "Platform: governance validation"
+                }
+            ],
+            "story_text": "Platform (links project to dc43 services & validates policy)."
+        },
+        "w2_story": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/runtime-verdicts.png",
+                    "alt": "Runtime verdicts"
+                },
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "Steward metrics history"
+                }
+            ],
+            "story_text": "Team reviews first runtime outputs and governance metrics; ops gets findings."
+        },
+        "w2_s1": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/runtime-verdicts.png",
+                    "alt": "Governance observations collected"
+                }
+            ],
+            "story_text": "Runtime: reads & writes call governance service; observations collected."
+        },
+        "w2_s2": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/runtime-verdicts.png",
+                    "alt": "Governance emits verdicts"
+                }
+            ],
+            "story_text": "Governance emits verdicts and per-port metrics."
+        },
+        "w2_s3": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "Observability and catalog"
+                }
+            ],
+            "story_text": "Observability and catalog surface metrics and dataset versions."
+        },
+        "w2_s4": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "Steward and PO review"
+                }
+            ],
+            "story_text": "Team reviews early results before wider production ramp."
+        },
+        "w2_de": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/runtime-verdicts.png",
+                    "alt": "DE observes pipeline verdicts"
+                }
+            ],
+            "story_text": "DE — Luca (observes pipeline verdicts)."
+        },
+        "w2_ds": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "DS reviews evidence"
+                }
+            ],
+            "story_text": "DS — Steward (reviews evidence)."
+        },
+        "w3_story": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/contract-editor.png",
+                    "alt": "Contract editor"
+                },
+                {
+                    "file": "assets/screenshots/compatibility-matrix.png",
+                    "alt": "Compatibility matrix"
+                }
+            ],
+            "story_text": "Steward discovers false positives and decides rule behavior; may request DE investigation."
+        },
+        "w3_s1": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "Steward detects false positives"
+                }
+            ],
+            "story_text": "Steward opens a challenge on a rule due to false positives."
+        },
+        "w3_s2": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/audit-report.png",
+                    "alt": "Audit report reproduction"
+                }
+            ],
+            "story_text": "Steward reproduces the issue using audit outputs and historical metrics."
+        },
+        "w3_s3": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/contract-editor.png",
+                    "alt": "Publish new contract version"
+                }
+            ],
+            "story_text": "Steward changes rule and publishes a new contract version with rationale & tests."
+        },
+        "w3_s4": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/compatibility-matrix.png",
+                    "alt": "Compatibility matrix update"
+                },
+                {
+                    "file": "assets/screenshots/product-catalog.png",
+                    "alt": "Product catalog update"
+                }
+            ],
+            "story_text": "Steward asks DE to investigate discrepancies; PO updates catalog compatibility info."
+        },
+        "w3_s5": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/runtime-verdicts.png",
+                    "alt": "Platform applies new version"
+                }
+            ],
+            "story_text": "Platform applies the new version & enforcement across environments."
+        },
+        "w3_ds": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/contract-editor.png",
+                    "alt": "Steward UI"
+                }
+            ],
+            "story_text": "DS — Steward (challenges & publishes new version)."
+        },
+        "w3_po": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/product-catalog.png",
+                    "alt": "PO updates catalog"
+                }
+            ],
+            "story_text": "PO — Ana (updates catalog)."
+        },
+        "w4_story": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/databricks-write.png",
+                    "alt": "Analyst notebook"
+                },
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "Metrics showing shrinkage"
+                }
+            ],
+            "story_text": "Analysts see a shrinking valid set and alerts trigger cross-product investigation."
+        },
+        "w4_s1": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/databricks-write.png",
+                    "alt": "lenient read example"
+                }
+            ],
+            "story_text": "Data consumer reads leniently for exploration."
+        },
+        "w4_s2": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "UI banner showing valid_rows_ratio"
+                }
+            ],
+            "story_text": "UI shows valid_rows_ratio banner & warnings."
+        },
+        "w4_s3": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "Shrinkage metric"
+                }
+            ],
+            "story_text": "Metric shows valid_rows_ratio dropping."
+        },
+        "w4_s4": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/pipeline-rca.png",
+                    "alt": "Pipeline RCA graph"
+                }
+            ],
+            "story_text": "Alerts raised; DE notified to investigate cross-product impact."
+        },
+        "w4_dc": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/databricks-write.png",
+                    "alt": "Data consumer work"
+                }
+            ],
+            "story_text": "DC — Marta (exploratory reads)."
+        },
+        "w4_de": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/pipeline-rca.png",
+                    "alt": "DE investigates RCA"
+                }
+            ],
+            "story_text": "DE — Luca (receives alert)."
+        },
+        "w5_story": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/pipeline-rca.png",
+                    "alt": "RCA timeline"
+                },
+                {
+                    "file": "assets/screenshots/data-product-editor.png",
+                    "alt": "Updated product definition"
+                },
+                {
+                    "file": "assets/screenshots/dependency-graph.png",
+                    "alt": "Dependency graph"
+                }
+            ],
+            "story_text": "Engineer builds RCA timeline; steward chooses remediation; engineer applies dual-path ingestion."
+        },
+        "w5_s1": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/runtime-verdicts.png",
+                    "alt": "collected observations"
+                }
+            ],
+            "story_text": "DE collects per-port observations across products."
+        },
+        "w5_s2": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/audit-report.png",
+                    "alt": "audit outputs"
+                }
+            ],
+            "story_text": "DE runs strict vs lenient delta / audit to find offending rows."
+        },
+        "w5_s3": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/dependency-graph.png",
+                    "alt": "upstream dependency graph"
+                }
+            ],
+            "story_text": "Cross-product RCA: identify upstream change."
+        },
+        "w5_s4": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/contract-editor.png",
+                    "alt": "steward publishes upstream patch"
+                }
+            ],
+            "story_text": "Steward decides to update rule or request upstream fix; publishes upstream patch."
+        },
+        "w5_s5": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/data-product-editor.png",
+                    "alt": "update product definitions and versions"
+                },
+                {
+                    "file": "assets/screenshots/pipeline-rca.png",
+                    "alt": "remediation pipeline view"
+                }
+            ],
+            "story_text": "DE implements remediation and updates product definitions & versions."
+        },
+        "w5_de": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/runtime-verdicts.png",
+                    "alt": "DE RCA"
+                }
+            ],
+            "story_text": "DE — Luca (RCA & remediation)."
+        },
+        "w5_ds": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/contract-editor.png",
+                    "alt": "Steward decision UI"
+                }
+            ],
+            "story_text": "DS — Steward (decides fix/publish)."
+        },
+        "w6_story": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "Monitoring & metrics"
+                },
+                {
+                    "file": "assets/screenshots/audit-report.png",
+                    "alt": "Audit report"
+                }
+            ],
+            "story_text": "System in steady state — monitoring, SLA reporting and audits keep products healthy."
+        },
+        "w6_s1": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "weekly reports"
+                }
+            ],
+            "story_text": "Monitoring & weekly reports show improvements."
+        },
+        "w6_s2": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/audit-report.png",
+                    "alt": "audit & lifecycle checks"
+                }
+            ],
+            "story_text": "Stewards & platform audit the lifecycle and SLAs."
+        },
+        "w6_s3": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/databricks-write.png",
+                    "alt": "analyst routine"
+                }
+            ],
+            "story_text": "Analysts trust the dataset; audits/reports are routine."
+        },
+        "w6_pl": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "platform monitoring"
+                }
+            ],
+            "story_text": "Platform (monitoring & policy)."
+        },
+        "w6_ds": {
+            "screenshots": [
+                {
+                    "file": "assets/screenshots/steward-metrics-history.png",
+                    "alt": "steward ongoing audit"
+                }
+            ],
+            "story_text": "DS — Steward (ongoing audit)."
+        }
+    },
+    "edges": {}
+}

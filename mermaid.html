@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>MMD Preview (pan/zoom + tooltips)</title>
+
+    <!-- libs -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+
+    <link rel="stylesheet" href="/assets/css/mermaid-visuals.css" />
+</head>
+
+<body>
+    <h3>Story Swimlane — preview</h3>
+
+    <div class="panel" id="controls">
+        <button id="btn-render">Render</button>
+        <button id="btn-download">Download .mmd</button>
+        <button id="btn-zoom-in">Zoom In</button>
+        <button id="btn-zoom-out">Zoom Out</button>
+        <button id="btn-zoom-reset">Reset</button>
+        <span class="note">Edit the mermaid in the textarea, then click Render. When ready, Download to save a .mmd
+            file.</span>
+        <div id="error" role="alert" aria-live="polite"></div>
+    </div>
+
+    <div class="row">
+        <div id="render" class="panel">
+            <div id="mermaid-container" aria-live="polite"></div>
+        </div>
+    </div>
+
+    <h4>Mermaid source (editable)</h4>
+    <textarea id="source" placeholder="Mermaid source will be fetched from /assets/data/story.mmd"></textarea>
+
+    <script src="/assets/js/mermaid-visuals.js" />
+
+    <!-- modal placeholder (already created dynamically if missing) -->
+    <div id="story-image-modal"
+        style="display:none;position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;z-index:999999;">
+        <div
+            style="max-width:90%;max-height:90%;background:#fff;padding:12px;border-radius:8px;box-shadow:0 6px 20px rgba(2,6,23,0.4);">
+            <img id="modal-img" src="" style="max-width:100%;max-height:70vh;display:block;border-radius:6px" />
+            <div id="modal-caption" style="margin-top:8px;color:#111"></div>
+            <div style="margin-top:8px;text-align:right;"><button id="modal-close">Close</button></div>
+        </div>
+    </div>
+    <script>
+            (function () {
+                const modal = document.getElementById('story-image-modal');
+                if (modal) {
+                    modal.querySelector('#modal-close').addEventListener('click', () => modal.style.display = 'none');
+                    modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+                }
+            })();
+    </script>
+
+</body>
+
+</html>
